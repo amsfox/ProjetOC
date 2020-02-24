@@ -1,62 +1,78 @@
-.page
+body
 {
-	width: 600px;
+	width: 700px;
 	margin: auto;
-	border: 2px grey solid;
 	font-family: "trebuchet ms","Arial", sans-serif;
 }
 
-body
-{
-	font-size: 0.6em;
+.bloc
+{	
+	
+	border: 2px black solid;
+	display: flex;
+	flex-direction: row-reverse;
 }
 
 h1
 {
-	font-size: 2.5em;
-
+	color: black;
 }
 
-h2
+section
 {
-	border-bottom: 2px rgb(254,202,8) solid;
-	margin-left: 20px;
-	margin-right: 20px;
-	text-transform: uppercase;
+	text-align: justify;
+	font-size: 0.7em;
+	color: rgb(74,74,74);
 }
 
-.entete
-{
-	height: 100px;
-	margin-left: 20px;
-}
-
-.entete p
-{
-	font-size: 1.5em;
-}
+/*-- Titre --*/
 
 .prenom
 {
 	color: rgb(254,202,8);
 }
 
-.underline_dev
+
+.develo
 {
 	border-bottom: 2px rgb(254,202,8) solid;
 }
 
-section
+.titre h1
 {
-	display: flex;
-	flex-direction: row-reverse;
+	font-weight: normal;
 }
 
-article
+/*-- Corps --*/
+
+main
 {
-	margin: auto;
-	text-align: justify;
-	color: rgb(74,74,74);
+	flex: 2.8;
+	padding-left: 30px;
+	padding-right: 20px;
+
+}
+
+main section h1
+{
+	border-bottom: 2px rgb(254,202,8) solid;
+	height: 1.5em;
+}
+
+main article
+{
+	display: flex;
+}
+
+.date
+{
+	flex: 1;
+	margin-right: 10px;
+}
+
+.element
+{
+	flex: 2.5;
 }
 
 article ul
@@ -73,130 +89,98 @@ article li::before
 	margin-left: -1em;
 }
 
-article h3
-{
-	text-transform: uppercase;
-}
-
-.formation
+.recommandation article
 {
 	display: flex;
 	justify-content: space-between;
 }
 
-.formation div
+.reco2
 {
-	margin-right: 30px;
+	padding-right: 70px;
 }
 
-.date
+h1 i
 {
-	width: 300px;
-	
+	color: rgb(254,202,8);
 }
 
-.recommandations
-{
-	display: flex;
-	justify-content: space-between;
-	margin-left: 30px;
-	margin-right: 60px;
-}
+/*-- Bandeau--*/
 
-
-aside
+.bandeau
 {
-	background-color: #FDD835;
-	text-align: justify;
-	width: 70%;
+	flex: 1;
 	display: flex;
 	flex-direction: column;
+	background-color: rgb(254,202,8);
+
 }
 
-.photo
+.bandeau .picture
 {
+	text-align: center;
+}
+
+.photo_ahmed
+{
+	border: 2px black solid;
 	border-radius: 100px;
-	height: 100px;
-	text-align: center;
-	border: 3px rgb(254,202,8) solid;
+	height: 120px;
+	width: 120px;
 }
 
-.ico
-{
-	width: 20px;
-}
-
-aside h3
+.bandeau h1
 {
 	text-align: center;
-	color: rgb(254,202,8);
 	background-color: rgb(64,64,64);
+	color: rgb(254,202,8);
 }
 
-aside p
+.bandeau p
 {
-	margin-left: 20px;
-	margin-right: 20px;
-	color: rgb(74,74,74);
+	text-align: justify;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
-
-.reco 
+.loisirs i
 {
-	text-align: center;
+	font-size: 2em;
 }
 
-
-@media all and (max-width: 1024px)
+.loisirs p
 {
-	.page
+	display: flex;
+	justify-content: space-between;
+
+}
+
+/*-- responsive --*/
+@media all and (max-width: 768px)
+{
+	body
 	{
 		width: auto;
 	}
-
-	.entete
-	{
-		height: auto;
-		text-align: center;
-	}
-
-	section
-	{
-		flex-direction: column;
-	}
-
-	.date
-	{
-		width: 150px;
-	}
-
-	aside
-	{
-		width: auto;
-		flex-direction: row;
-	}
-
-	.photo
-	{
-		position: absolute;
-		top: 10px;
-	}
+	 
 }
 
+@media all and (max-width: 415px) and (orientation: portrait)
+{
+	.bloc
+	{
+		width: auto;
+		flex-direction: column-reverse;
+	}
 
+	.reco2
+	{
+		padding-right: 5px;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	main
+	{
+		padding-left: 5px;
+		padding-right: 5px;
+	}	 
+}
