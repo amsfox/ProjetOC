@@ -155,6 +155,12 @@ h1 i
 
 }
 
+.loisirs p
+{
+	flex-grow: 2;
+
+}
+
 /*-- responsive --*/
 @media all and (max-width: 768px)
 {
